@@ -9,11 +9,18 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
+alias unlimitednode="export NODE_OPTIONS=--max-old-space-size=5120"
+alias temurin11="export JAVA_HOME=/Users/jzarzeckis/Library/Java/JavaVirtualMachines/temurin-11.0.17/Contents/Home"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
+alias tsapp="npx -p typescript tsc -p src/tsconfig.app.json --noEmit"
+alias tsspec="npx -p typescript tsc -p src/tsconfig.spec.json --noEmit"
+alias sshkey="/usr/bin/ssh-add --apple-use-keychain"
+alias nocors="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp"
+alias more_memory_for_node="export NODE_OPTIONS=--max-old-space-size=4096"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -133,6 +140,8 @@ done
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume output volume 100'"
+
+alias killkavd="sudo launchctl unload /Library/LaunchDaemons/com.kaspersky.kav.kavd.plist"
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
