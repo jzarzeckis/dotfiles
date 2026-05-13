@@ -1,0 +1,94 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  "diff_view_style": "split",
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "right",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "code_lens": "on",
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "acceptEdits",
+      },
+      "type": "registry",
+    },
+  },
+  "language_models": {
+    "openai_compatible": {},
+  },
+  "minimap": {
+    "show": "always",
+    "current_line_highlight": "all",
+  },
+  "context_servers": {
+    "Chrome Devtools": {
+      "enabled": true,
+      "remote": false,
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"],
+    },
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato",
+  },
+  "agent": {
+    "play_sound_when_agent_done": "always",
+    "dock": "left",
+    "tool_permissions": {
+      "default": "confirm",
+    },
+    "default_profile": "write",
+    "default_model": {
+      "enable_thinking": true,
+      "provider": "google",
+      "model": "gemini-2.5-flash",
+    },
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 12,
+  "buffer_font_family": "Fira Code",
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato",
+  },
+  "terminal": {
+    "font_family": ".ZedMono",
+    "font_size": 12,
+    "line_height": "standard",
+  },
+  "show_edit_predictions": false,
+  "inlay_hints": { "enabled": true },
+  "indent_guides": {
+    "enabled": true,
+    "background_coloring": "indent_aware",
+  },
+  "calls": {
+    "mute_on_join": true,
+  },
+  "languages": {
+    "Python": {
+      "enable_language_server": false,
+    },
+  },
+}
