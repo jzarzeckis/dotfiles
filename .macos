@@ -151,6 +151,15 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
+# Trackpad: explicitly set default pointer/scroll speeds so they survive user switches
+# (to revert: defaults delete NSGlobalDomain com.apple.trackpad.scaling, etc.)
+# defaults write NSGlobalDomain com.apple.trackpad.scaling -float 0.6875
+# defaults write NSGlobalDomain com.apple.mouse.scaling -float 1.0
+# defaults write NSGlobalDomain com.apple.scrollwheel.scaling -float 0.3125
+defaults delete NSGlobalDomain com.apple.trackpad.scaling
+defaults delete NSGlobalDomain com.apple.mouse.scaling
+defaults delete NSGlobalDomain com.apple.scrollwheel.scaling
+
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
@@ -170,7 +179,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
+sudo systemsetup -settimezone "Europe/Riga" > /dev/null
 
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
