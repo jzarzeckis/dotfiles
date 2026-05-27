@@ -38,7 +38,7 @@
   },
   "context_servers": {
     "Chrome Devtools": {
-      "enabled": true,
+      "enabled": false,
       "remote": false,
       "command": "npx",
       "args": ["-y", "chrome-devtools-mcp@latest"],
