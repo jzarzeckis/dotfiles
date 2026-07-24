@@ -26,6 +26,10 @@
   "code_lens": "on",
   "agent_servers": {
     "claude-acp": {
+      "default_config_options": {
+        "effort": "medium",
+        "model": "opus[1m]"
+      },
       "type": "registry",
     },
   },
@@ -43,13 +47,27 @@
       "command": "npx",
       "args": ["-y", "chrome-devtools-mcp@latest"],
     },
+    "Playwright": {
+      "enabled": false,
+      "remote": false,
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
   },
   "icon_theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Macchiato",
   },
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "zed.dev",
+        "model": "gemini-3-flash",
+        "enable_thinking": true,
+        "effort": "HIGH"
+      }
+    ],
     "play_sound_when_agent_done": "always",
     "dock": "left",
     "tool_permissions": {
@@ -57,9 +75,10 @@
     },
     "default_profile": "write",
     "default_model": {
+      "effort": "HIGH",
       "enable_thinking": true,
-      "provider": "google",
-      "model": "gemini-2.5-flash",
+      "provider": "zed.dev",
+      "model": "gemini-3-flash",
     },
   },
   "base_keymap": "VSCode",
@@ -67,7 +86,7 @@
   "buffer_font_size": 12,
   "buffer_font_family": "Fira Code",
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Macchiato",
   },
