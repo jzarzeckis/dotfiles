@@ -35,7 +35,9 @@
   "agent_servers": {
     "claude-acp": {
       "default_config_options": {
-        "model": "opus[1m]"
+        "mode": "auto",
+        "effort": "high",
+        "model": "opus"
       },
       "type": "registry",
     },
