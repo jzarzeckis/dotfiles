@@ -69,12 +69,15 @@
     "dark": "Catppuccin Macchiato",
   },
   "agent": {
+    "sandbox_permissions": {
+      "allow_all_hosts": true
+    },
     "favorite_models": [
       {
         "provider": "zed.dev",
-        "model": "gemini-3-flash",
+        "model": "gemini-4-neon",
         "enable_thinking": true,
-        "effort": "HIGH"
+        "effort": "MEDIUM"
       }
     ],
     "play_sound_when_agent_done": "always",
@@ -119,6 +122,45 @@
     },
     "tool_permissions": {
       "tools": {
+        "mcp:mcp-server-playwright:browser_network_requests": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_tabs": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_run_code_unsafe": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_evaluate": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_console_messages": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_press_key": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_wait_for": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_type": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_take_screenshot": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_snapshot": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_navigate": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_find": {
+          "default": "allow"
+        },
+        "mcp:mcp-server-playwright:browser_click": {
+          "default": "allow"
+        },
         "terminal": {
           "always_allow": [
             {
@@ -126,6 +168,9 @@
             },
             {
               "pattern": "^bun\\b"
+            },
+            {
+              "pattern": "^grep\\b"
             }
           ],
           "always_deny": [
@@ -135,14 +180,14 @@
           ],
         },
       },
-      "default": "confirm",
+      "default": "allow",
     },
     "default_profile": "write",
     "default_model": {
-      "effort": "high",
+      "effort": "MEDIUM",
       "enable_thinking": true,
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-6",
+      "model": "gemini-4-neon",
     },
   },
   "base_keymap": "VSCode",
